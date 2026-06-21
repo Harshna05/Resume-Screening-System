@@ -117,4 +117,3 @@ Review the generated results:
 
 **Harshna Makwana**
 
-Internship Project 2026
