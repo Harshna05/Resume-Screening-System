@@ -59,20 +59,6 @@ git checkout master
 
 ---
 
-## Tech Stack
-
-| Area | Technology |
-|--------|------------|
-| Programming Language | Python |
-| NLP | NLTK |
-| Machine Learning | Scikit-learn |
-| Similarity Matching | TF-IDF + Cosine Similarity |
-| User Interface | Streamlit |
-| File Parsing | pdfplumber, python-docx |
-| Data Handling | Pandas |
-
----
-
 ## Project Structure
 
 ```text
