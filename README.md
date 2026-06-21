@@ -1,58 +1,145 @@
 # Resume Screening & Candidate Ranking System using NLP
 
-## Project Overview
-
-The Resume Screening & Candidate Ranking System is an AI-powered recruitment assistant developed using Python, Natural Language Processing (NLP), and Machine Learning techniques.
-
-The application allows users to upload multiple resumes and compare them against a job description. It automatically extracts resume content, preprocesses text, calculates similarity scores using TF-IDF and Cosine Similarity, and ranks candidates based on their relevance to the job requirements.
-
-This system helps streamline the recruitment process by reducing manual resume screening efforts and identifying the most suitable candidates efficiently.
+An AI-powered recruitment assistant that parses resumes and ranks candidates against a job description using Natural Language Processing (NLP).
 
 ---
-### Clone the Repository
+
+## Project Overview
+
+The Resume Screening & Candidate Ranking System automates the process of resume evaluation by comparing candidate resumes with a given job description.
+
+The application extracts text from resumes, preprocesses the content using NLP techniques, calculates similarity scores using TF-IDF and Cosine Similarity, and ranks candidates based on their relevance to the job requirements.
+
+The system also identifies matched and missing skills, helping recruiters make faster and more informed hiring decisions.
+
+---
+## Repository Information
+
+**Important:** The latest stable version of this project is maintained in the **master** branch.
+
+After cloning the repository, switch to the master branch using:
 
 ```bash
-git clone https://github.com/Harshna05/Resume-Screening-System.git
-cd Resume-Screening-System
 git checkout master
 ```
 
-> Note: The latest stable version of the project is maintained in the `master` branch.
-
 ## Features
 
-- Upload resumes in PDF, DOCX, and TXT formats
-- Automatic resume text extraction and parsing
-- NLP-based text preprocessing
-  - Lowercasing
-  - Tokenization
-  - Stopword Removal
-  - Lemmatization
+### Resume Parsing
+- Supports PDF resumes using pdfplumber
+- Supports DOCX resumes using python-docx
+- Supports TXT resumes
+
+### Text Preprocessing
+- Lowercasing
+- Tokenization
+- Stopword Removal
+- Lemmatization
+
+### Similarity Matching
 - TF-IDF Vectorization
-- Cosine Similarity Matching
-- Skill Extraction and Comparison
-- Candidate Ranking based on Match Score
-- Identification of Matched and Missing Skills
-- Interactive Streamlit Dashboard
-- Support for Multiple Resume Uploads
+- Cosine Similarity Scoring
+- Resume-to-Job Description Matching
+
+### Candidate Ranking
+- Match Percentage Calculation
+- Ranked Candidate List
+- Top Candidate Recommendation
+
+### Skill Analysis
+- Skill Extraction
+- Matched Skills Detection
+- Missing Skills Identification
+
+### User Interface
+- Built using Streamlit
+- Multiple Resume Upload Support
+- Interactive Dashboard
+- Real-Time Candidate Ranking
+
+---
+
+## Tech Stack
+
+| Area | Technology |
+|--------|------------|
+| Programming Language | Python |
+| NLP | NLTK |
+| Machine Learning | Scikit-learn |
+| Similarity Matching | TF-IDF + Cosine Similarity |
+| User Interface | Streamlit |
+| File Parsing | pdfplumber, python-docx |
+| Data Handling | Pandas |
+
+---
+
+## Project Structure
+
+```text
+Resume Screening System
+│
+├── app.py
+├── setup_nltk.py
+├── requirements.txt
+├── README.md
+│
+├── parser
+│   ├── pdf_parser.py
+│   ├── docx_parser.py
+│   ├── txt_parser.py
+│
+├── preprocessing
+│   └── text_cleaner.py
+│
+├── ranking
+│   └── similarity.py
+│
+├── utils
+│   ├── skills_extractor.py
+│   └── skill_matcher.py
+│
+├── resumes
+│
+├── test_parser.py
+├── test_cleaner.py
+├── test_similarity.py
+├── test_skills.py
+├── test_skill_matching.py
+└── test_ranking.py
+```
+
+---
+
+## Prerequisites
+
+- Python 3.10 or above
+- pip
+- Git
 
 ---
 
 ## Setup Instructions
 
-### 1. Install Required Packages
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd Resume-Screening-System
+```
+
+### 2. Install Required Packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Download NLTK Resources
+### 3. Download NLTK Resources
 
 ```bash
 python setup_nltk.py
 ```
 
-### 3. Run the Application
+### 4. Run the Application
 
 ```bash
 streamlit run app.py
@@ -62,7 +149,7 @@ The application will automatically open in your browser.
 
 ---
 
-## Usage Details
+## Usage
 
 ### Step 1
 Launch the application:
@@ -72,14 +159,14 @@ streamlit run app.py
 ```
 
 ### Step 2
-Upload one or more resumes in any supported format:
+Upload one or more resumes in:
 
 - PDF (.pdf)
 - DOCX (.docx)
 - TXT (.txt)
 
 ### Step 3
-Paste the Job Description into the provided text area.
+Paste the Job Description into the text area.
 
 Example:
 
@@ -97,32 +184,38 @@ AWS
 ```
 
 ### Step 4
-Click the **Analyze Candidates** button.
+Click **Analyze Candidates**.
 
 ### Step 5
-Review the generated results:
-
-- Candidate Match Score (%)
-- Ranked Candidate List
+View:
+- Candidate Rankings
+- Match Scores
 - Matched Skills
 - Missing Skills
-- Top Candidate Recommendation
+- Best Candidate Recommendation
 
 ---
 
-## Technologies Used
+## Sample Output
 
-- Python
-- Streamlit
-- NLTK
-- Scikit-learn
-- Pandas
-- pdfplumber
-- python-docx
+| Rank | Candidate | Match Score |
+|------|------------|-------------|
+| 1 | Candidate A | 89% |
+| 2 | Candidate B | 82% |
+| 3 | Candidate C | 75% |
+
+---
+
+## Future Improvements
+
+- Advanced Skill Matching
+- Semantic Similarity using Sentence Transformers
+- Resume Export Reports
+- Candidate Recommendation Dashboard
+- Cloud Deployment
 
 ---
 
 ## Author
 
 **Harshna Makwana**
-
