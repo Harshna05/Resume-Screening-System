@@ -9,6 +9,15 @@ The application allows users to upload multiple resumes and compare them against
 This system helps streamline the recruitment process by reducing manual resume screening efforts and identifying the most suitable candidates efficiently.
 
 ---
+### Clone the Repository
+
+```bash
+git clone https://github.com/Harshna05/Resume-Screening-System.git
+cd Resume-Screening-System
+git checkout master
+```
+
+> Note: The latest stable version of the project is maintained in the `master` branch.
 
 ## Features
 
